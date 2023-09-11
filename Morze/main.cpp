@@ -1,9 +1,5 @@
 ﻿#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <string>
 #include <Windows.h>
-#include "replace.cpp"
 #include "transform.cpp"
 using namespace std;
 
@@ -24,7 +20,8 @@ int main()
 		{
 			cout << "Введите текст перевода с русского; с морзы; или meny: ";
 			getline(cin, s);
-			if (s != "meny") {
+			if (s != "meny") 
+			{
 				Transform tr;
 				s = tr.trans(s);
 
