@@ -22,7 +22,7 @@ int main()
 
 		while (tran == "Морзе")
 		{
-			cout << "Введите текст перевода с русского или meny: ";
+			cout << "Введите текст перевода с русского; с морзы; или meny: ";
 			getline(cin, s);
 			if (s != "meny") {
 				Transform tr;
@@ -33,48 +33,14 @@ int main()
 			else if (s == "meny")
 			{
 				cout << "Добро пожаловать в МЕНЮ, вот что вы можете сделать:" << endl;
-				cout << "1)Завершить программу" << endl << "2)Перевести с морзы" << endl << "3)Продолжить перевод с русскокго" << endl << "Ваш вариант: ";
+				cout << "1)Завершить программу" << endl << "Ваш вариант: ";
 				cin >> x;
 				switch (x)
 				{
 				case 1:
 					tran = "0";
-					bu == false;
+					bu = false;
 					break;
-				case 2:
-					tran = "Рус";
-					break;
-				case 3:
-					tran = "Морзе";
-				}
-			}
-		}
-		while (tran == "Рус")
-		{
-			cout << "Введите текст перевода или meny: ";
-			getline(cin, s);
-			if (s != "meny") {
-				Transform tr;
-				s = tr.trans(s);
-
-				cout << endl << s << endl;
-			}
-			else if (s == "meny")
-			{
-				cout << "Добро пожаловать в МЕНЮ, вот что вы можете сделать:" << endl;
-				cout << "1)Завершить программу" << endl << "2)Продолжить перевод с морзы" << endl << "3)Перевод с русскокго" << endl << "Ваш вариант: ";
-				cin >> x;
-				switch (x)
-				{
-				case 1:
-					tran = "0";
-					bu == false;
-					break;
-				case 2:
-					tran = "Рус";
-					break;
-				case 3:
-					tran = "Морзе";
 				}
 			}
 		}

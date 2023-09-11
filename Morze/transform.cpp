@@ -17,11 +17,19 @@ public:
 										" -* ", " --- ", " *--* "," *-* ", " *** "," - "," **- "," **-* "," **** "," -*-* "," ---* "," ---- ",
 										" --*- "," *--*-* "," -*-- "," -**-"," ***-*** "," **-- "," *-*- "," "};
 		Replace rep;
-
-		for (int i = 0; i < 32; i++)
+		bool exists = count(begin(*alf), end(*alf), txt[0]);
+		if (exists)
 		{
-			txt = rep.replace(txt, (string)alf[i], (string)morz[i]);
+			for (int i = 0; i < 32; i++)
+			{
+				txt = rep.replace(txt, (string)alf[i], (string)morz[i]);
+			}
 		}
+		else 
+		{
+			txt = "not found";
+		}
+			
 
 
 		return txt;
